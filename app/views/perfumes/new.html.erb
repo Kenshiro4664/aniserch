@@ -1,0 +1,57 @@
+<div class="diagnosis">
+
+ <div class="janru">
+   <p>アニメジャンル診断</p>
+ </div>
+
+   <%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="sindan">
+            <div class="col-12">
+                <p>Question1. 休日の過ごし方は…</p>
+            </div>
+            <div class="sentaku">
+                <div class="col-6">
+                <div class="gazou"><img src="/assets/soto.jpg" alt=""></div>
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>家を出て何かする</p>
+                </div>
+                <div class="col-6">
+                <div class="gazou"><img src="/assets/naka.jpg" alt=""></div>
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>家でゆっくり</p>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <p>Question2. 夏に行くなら…</p>
+            </div>
+            <div class="sentaku">
+                <div class="col-6">
+                <div class="gazou"><img src="/assets/umi2.jpg" alt=""></div>
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>海</p>
+            </div>
+                <div class="col-6">
+                <div class="gazou"><img src="/assets/yama2.jpg" alt=""></div>
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>山</p>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <p>Question3. 大切にしているのは…</p>
+            </div>
+            <div class="sentaku">
+                <div class="col-6">
+                <div class="gazou"><img src="/assets/nakama.jpg" alt=""></div>
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>仲間</p>
+                </div>
+                <div class="col-6">
+                <div class="gazou"><img src="/assets/kanjo3.jpg" alt=""></div>
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>感情</p>
+                </div>
+            </div>
+
+    </div>
+    <div class="sindanbotan">
+    <input type="submit" name="commit" value="post" data-disable-with="post">
+    </div>
+<% end %>
+
+</div>

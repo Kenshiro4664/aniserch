@@ -1,0 +1,26 @@
+<div class="post">
+ <div class="title">
+   <p>みんなのおすすめ掲示板</p>
+ </div>
+<div class="osusume">
+ <%= link_to "自分のおすすめを投稿", new_post_path %>
+ </div>
+ <div class="container">
+  <% @posts.each do |t| %>
+    <div class="toukou">
+    <p>タイトル： <%= t.title %></p>
+    <br>
+    <p>プラットフォーム： <%= t.form %></p>
+    <br>
+    <p>感想： <%= t.idea %></p>
+    </div>
+  <% end %>
+  <div class="page">
+  <%= paginate @posts %>
+  </div>
+ </div>
+
+ <div class="link">
+ <%= link_to "ホームに戻る", animes_path %>
+ </div>
+</div>

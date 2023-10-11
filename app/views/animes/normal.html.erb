@@ -1,0 +1,19 @@
+<div class="normal">
+ <div class="guide">
+ <p>EPISODE NORMAL(エピソード 26話以上75話以下)<p>
+ </div>
+ <div class="anime">
+  <% @animes.each do |t| %>
+    <% if t.category == "normal" %>  
+     <div class="box"> 
+     <%= link_to t.title, anime_path(t.id) %>
+     <%= image_tag t.image_url, size: "285x180" if t.image? %>
+     </div>
+    <% end %>
+  <% end %>
+ </div>
+ <div class="link">
+ <%= link_to "ホームに戻る", animes_path %>
+ </div>
+</div>
+

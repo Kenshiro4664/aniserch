@@ -1,0 +1,29 @@
+<div class="edit">
+ <%= form_for @anime do |f| %> 
+    <%= f.label :タイトル %>
+    <br>
+    <%= f.text_field :title, :size => 30 %>
+    <br>
+    <%= f.label :画像 %>
+    <br>
+    <%= f.file_field :image %>
+    <br>
+    <%= f.label :概要  %>
+    <br>
+    <%= f.text_area :contents, :size => "30x10" %>
+    <br>
+    <%= f.label :エピソード  %>
+    <br>
+    <%= f.text_area :episode, :size => "30x2" %>
+    <br>
+    <%= f.label :プラットフォーム %>
+    <br>
+    <%= f.text_area :platform, :size => "30x2" %>
+    <br>
+    <%= f.select :category, [["長い", "long"], ["普通", "normal"], ["短い", "short"]], include_blank: "どの投稿？" %>
+    <br>
+    <br>
+  
+    <%= f.submit "編集する" %>
+  <% end %>
+<div>

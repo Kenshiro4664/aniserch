@@ -1,0 +1,20 @@
+<div class="long">
+  <div class="guide">
+    <p>EPISODE LONG(エピソード 76話以上)</p>
+  </div>
+   
+  <div class="anime"> 
+   <% @animes.each do |t| %>
+    <% if t.category == "long" %>  
+     <div class="box">
+     <%= link_to t.title, anime_path(t.id) %>
+     <%= image_tag t.image_url, size: "285x180" if t.image? %>
+     </div>
+    <% end %>
+   <% end %>
+  </div>
+ <div class="link">
+ <%= link_to "ホームに戻る", animes_path %>
+ </div>
+</div>
+

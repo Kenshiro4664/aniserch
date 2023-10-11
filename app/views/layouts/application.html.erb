@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Comic</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=DotGothic16&family=Kiwi+Maru:wght@500&family=Kosugi+Maru&family=Rampart+One&family=Train+One&display=swap" rel="stylesheet">
+    
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- コード追加 Bootstrap JavaScript読み込みコード-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- コード追加 Font Awesome読み込みコード-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  </head>
+
+  <body>
+   <header>
+     <div class="headline">
+     <p>アニサーチ</p>
+     </div>
+     <ul class="header-list">
+     <li><%= link_to "ホーム", animes_path %></li>
+     <li><%= link_to "新規投稿",new_anime_path %></li>
+     <li><%= link_to "診断", perfumes_path %></li>
+     <li><%= link_to "おすすめ掲示板", posts_path %></li>
+     </div>
+   </header>
+   <main>
+    <%= yield %>
+   </main>
+  </body>
+</html>
+

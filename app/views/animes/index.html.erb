@@ -1,0 +1,144 @@
+<div class="home">
+ <div class="d-demo">
+   <div class="d-demo__wrap">
+       <ul class="d-demo__list d-demo__list--left">
+           <li class="d-demo__item"><img src="/assets/onepiece.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/jujutu.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/jojo.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/haikyu.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/hiroaka.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/gintama.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/botti.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/danku.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/kaguya.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/kuroko.jpg" alt=""></li>
+        </ul>
+        <ul class="d-demo__list d-demo__list--left">
+        <li class="d-demo__item"><img src="/assets/onepiece.jpg" alt=""></li>
+        <li class="d-demo__item"><img src="/assets/jujutu.jpg" alt=""></li>
+        <li class="d-demo__item"><img src="/assets/jojo.jpg" alt=""></li>
+        <li class="d-demo__item"><img src="/assets/haikyu.jpg" alt=""></li>
+        <li class="d-demo__item"><img src="/assets/hiroaka.jpg" alt=""></li>
+        <li class="d-demo__item"><img src="/assets/gintama.jpg" alt=""></li>
+        <li class="d-demo__item"><img src="/assets/botti.jpg" alt=""></li>
+        <li class="d-demo__item"><img src="/assets/danku.jpg" alt=""></li>
+        <li class="d-demo__item"><img src="/assets/kaguya.jpg" alt=""></li>
+        <li class="d-demo__item"><img src="/assets/kuroko.jpg" alt=""></li>
+     </ul>
+   </div>
+
+   <div class="d-demo__wrap">
+       <ul class="d-demo__list d-demo__list--right">
+           <li class="d-demo__item"><img src="/assets/furubasu.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/gotoubun.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/major.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/kuranado.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/meidoin.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/osomatu.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/rezero.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/sakamoto.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/shingeki.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/spyfamily.jpg" alt=""></li>
+        </ul>
+        <ul class="d-demo__list d-demo__list--right">
+           <li class="d-demo__item"><img src="/assets/furubasu.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/gotoubun.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/major.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/kuranado.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/meidoin.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/osomatu.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/rezero.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/sakamoto.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/shingeki.jpg" alt=""></li>
+           <li class="d-demo__item"><img src="/assets/spyfamily.jpg" alt=""></li>
+     </ul>
+   </div>
+</div>
+
+
+
+ <div class="lists">
+  アニメlist
+  </div>
+
+ <div class="long">
+   <div class="episode">
+     <p>EPISODE LONG(エピソード 76話以上)　<%= link_to 'すべて見る＞', animes_long_path %></p>
+   </div>   
+   <div class="anime"> 
+     <% @longs.each do |t| %> 
+       <% if t.category == "long" %> 
+       <div class="box">
+           <%= link_to t.title, anime_path(t.id) %>
+           <%= image_tag t.image_url, size: "300x180" if t.image? %>
+           </div>
+       <% end %>
+     <% end %>
+   </div>
+ </div>
+
+ <div class="normal">
+   <div class="episode">
+   <p>EPISODE NORMAL(エピソード 26話以上75話以下)　<%= link_to 'すべて見る＞', animes_normal_path %><p>
+   </div>
+   <div class="anime">
+     <% @normals.each do |t| %> 
+       <% if t.category == "normal" %> 
+           <div class="box"> 
+           <%= link_to t.title, anime_path(t.id) %>
+           <%= image_tag t.image_url, size: "300x180" if t.image? %>
+           </div>
+       <% end %>
+     <% end %>
+   </div>
+ </div>
+
+ <div class="short">
+   <div class="episode">
+   <p>EPISODE SHORT(エピソード 25話以下)　<%= link_to 'すべて見る＞', animes_short_path %></p>
+   </div>
+   <div class="anime">
+     <% @shorts.each do |t| %> 
+       <% if t.category == "short" %> 
+         <div class="box">
+           <%= link_to t.title, anime_path(t.id) %>
+           <%= image_tag t.image_url, size: "300x180" if t.image? %>
+           </div> 
+       <% end %>
+     <% end %>
+   </div>
+ </div>
+
+ <div class="lists">
+ アニメ診断
+ </div>
+ <div class="shindan">
+   <div class="setumei">
+   あなたにおすすめのアニメがみつかる！
+   </div>
+   <div class="go">
+   <%= link_to '診断へGo', perfumes_path %>
+   </div>
+ </div>
+
+ <div class="recommend">
+   <div class="lists">
+     おすすめ掲示板
+   </div>
+   <div class="container">
+   <% @posts.each do |t| %>
+     <div class="toukou">
+     <p>タイトル： <%= t.title %></p>
+     <p>プラットフォーム： <%= t.form %></p>
+     <br>
+     <p>感想： <%= t.idea %></p>
+     </div>
+   <% end %>
+   </div>
+     <div class="link">
+     <%= link_to '投稿一覧へ➡', posts_path %>
+     </div>
+   </div>
+ </div>
+
+</div>

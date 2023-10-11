@@ -1,0 +1,22 @@
+<div class="shinki">
+ <div class="title">
+  <p>おすすめ投稿</p>
+ </div>
+ <div class="container">
+   <%= form_for @post do |f| %>
+    <p><%= f.label :タイトル %></p>
+    <p><%= f.text_field :title, :size => 120 %></p>
+    <p><%= f.label :プラットフォーム %></p>
+    <p><%= f.text_field :form, :size => 120 %></p>
+    <p><%= f.label :感想  %></p>
+    <p><%= f.text_area :idea, :size => "122x10" %></p>
+    <div class="botan">
+    <input type="submit" name="commit" value="投稿" data-disable-with="投稿">
+    </div>
+   <% end %>
+  </div>
+
+  <div class="link">
+  <%= link_to "一覧に戻る", posts_path %>
+  </div>
+</div>

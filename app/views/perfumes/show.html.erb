@@ -1,0 +1,212 @@
+<div class="result">
+ <div class="intoro">
+  <h3>診断結果</h3>
+  <p>あなたにおすすめのアニメジャンルは…</p>
+ </div>
+
+ <div class="tweet-container">
+    <% if @perfume.question == "111" %>
+    <h1>冒険・バトル系アニメ</h1>
+    <div class="fadeUp">
+    <div class="recommend-anime">
+     <p>こんなアニメがおすすめ</p>
+      <div class="three">
+       <div class="osusume-1">
+       <p>ワンピース</p>
+       <div class="samune"><img src="/assets/onepiece.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 21 %></div>
+       </div>
+       <div class="osusume-2">
+       <p>ジョジョの奇妙な冒険</p>
+       <div class="samune"><img src="/assets/jojo.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 15 %></div>
+       </div>
+       <div class="osusume-3">
+       <p>メイドインアビス</p>
+       <div class="samune"><img src="/assets/meidoin.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 17 %></div>
+       </div>
+     </div>
+    </div>
+    </div>
+
+
+    <% elsif @perfume.question == "112" %>
+    <h1>アクションアニメ</h1>
+    <div class="fadeUp">
+    <div class="recommend-anime">
+     <p>こんなアニメがおすすめ</p>
+      <div class="three">
+       <div class="osusume-1">
+       <p>僕のヒーローアカデミア</p>
+       <div class="samune"><img src="/assets/hiroaka.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 9 %></div>
+       </div>
+       <div class="osusume-2">
+       <p>呪術廻戦</p>
+       <div class="samune"><img src="/assets/jujutu.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 5 %></div>
+       </div>
+       <div class="osusume-3">
+       <p>進撃の巨人</p>
+       <div class="samune"><img src="/assets/shingeki.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 16 %></div>
+       </div>
+     </div>
+    </div>
+    </div>
+
+    <% elsif @perfume.question == "121" %>
+    <h1>スポーツアニメ</h1>
+    <div class="fadeUp">
+    <div class="recommend-anime">
+    <p>こんなアニメがおすすめ</p>
+     <div class="three">
+      <div class="osusume-1">
+      <p>ハイキュー</p>
+      <div class="samune"><img src="/assets/haikyu.jpg" alt=""></div>
+      <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 20 %></div>
+      </div>
+      <div class="osusume-2">
+      <p>SLAM DUNK</p>
+      <div class="samune"><img src="/assets/danku.jpg" alt=""></div>
+      <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 19 %></div>
+      </div>
+      <div class="osusume-3">
+      <p>major</p>
+      <div class="samune"><img src="/assets/major.jpg" alt=""></div>
+      <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 10 %></div>
+      </div>
+    </div>
+   </div>
+   </div>
+
+    <% elsif @perfume.question == "122" %>
+    <h1>異世界転生系アニメ</h1>
+    <div class="fadeUp">
+    <div class="recommend-anime">
+     <p>こんなアニメがおすすめ</p>
+      <div class="three">
+       <div class="osusume-1">
+       <p>Re:ゼロから始める異世界生活</p>
+       <div class="samune"><img src="/assets/rezero.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 22 %></div>
+       </div>
+       <div class="osusume-2">
+       <p>転生したらスライムだった件</p>
+       <div class="samune"><img src="/assets/tensura.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 23 %></div>
+       </div>
+       <div class="osusume-3">
+       <p>無職転生</p>
+       <div class="samune"><img src="/assets/tensei.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 24 %></div>
+       </div>
+     </div>
+    </div>
+    </div>
+
+    <% elsif @perfume.question == "211" %>
+    <h1>日常・ほのぼの系アニメ</h1>
+    <div class="fadeUp">
+    <div class="recommend-anime">
+     <p>こんなアニメがおすすめ</p>
+      <div class="three">
+       <div class="osusume-1">
+       <p>ゆるキャン△</p>
+       <div class="samune"><img src="/assets/yuru.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 27 %></div>
+       </div>
+       <div class="osusume-2">
+       <p>スーパーカブ</p>
+       <div class="samune"><img src="/assets/super.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 26 %></div>
+       </div>
+       <div class="osusume-3">
+       <p>ぼっち・ざ・ろっく!</p>
+       <div class="samune"><img src="/assets/botti.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 25 %></div>
+       </div>
+     </div>
+    </div>
+    </div>
+
+    <% elsif @perfume.question == "212" %>
+    <h1>ギャグ・コメディ系アニメ</h1>
+    <div class="fadeUp">
+    <div class="recommend-anime">
+     <p>こんなアニメがおすすめ</p>
+      <div class="three">
+       <div class="osusume-1">
+       <p>銀魂</p>
+       <div class="samune"><img src="/assets/gintama.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 28 %></div>
+       </div>
+       <div class="osusume-2">
+       <p>おそ松さん</p>
+       <div class="samune"><img src="/assets/osomatu.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 29 %></div>
+       </div>
+       <div class="osusume-3">
+       <p>坂本ですが?</p>
+       <div class="samune"><img src="/assets/sakamoto.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 30 %></div>
+       </div>
+     </div>
+    </div>
+    </div>
+
+    <% elsif @perfume.question == "221" %>
+    <h1>恋愛・学園系アニメ</h1>
+    <div class="fadeUp">
+    <div class="recommend-anime">
+     <p>こんなアニメがおすすめ</p>
+      <div class="three">
+       <div class="osusume-1">
+       <p>かぐや様は告らせたい</p>
+       <div class="samune"><img src="/assets/kaguya.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 31 %></div>
+       </div>
+       <div class="osusume-2">
+       <p>五等分の花嫁</p>
+       <div class="samune"><img src="/assets/gotoubun.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 32 %></div>
+       </div>
+       <div class="osusume-3">
+       <p>フルーツバスケット</p>
+       <div class="samune"><img src="/assets/furubasu.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 33 %></div>
+       </div>
+     </div>
+    </div>
+    </div>
+
+    <% elsif @perfume.question == "222" %>
+    <h1>感動系アニメ</h1>
+    <div class="fadeUp">
+    <div class="recommend-anime">
+     <p>こんなアニメがおすすめ</p>
+      <div class="three">
+       <div class="osusume-1">
+       <p>ヴァイオレット・エヴァーガーデン</p>
+       <div class="samune"><img src="/assets/violet.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 34 %></div>
+       </div>
+       <div class="osusume-2">
+       <p>四月は君の嘘</p>
+       <div class="samune"><img src="/assets/sigatu.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 35 %></div>
+       </div>
+       <div class="osusume-3">
+       <p>CLANNAD</p>
+       <div class="samune"><img src="/assets/kuranado.jpg" alt=""></div>
+       <div class="tobi"><%= link_to "詳細へ", controller: 'animes', action: 'show', id: 36 %></div>
+       </div>
+     </div>
+    </div>
+    </div>
+
+    <% end %>
+
+</div>
+</div>

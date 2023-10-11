@@ -1,0 +1,26 @@
+<div class="details">
+  <div class="yoko">
+  <div class="library">
+   <%= image_tag @anime.image_url, size: "600x400" if @anime.image? %>
+  </div>
+  <div class="matter">
+   <h1><%= @anime.title %></h1>
+   <br>
+   <h4><%= @anime.contents %></h4>
+   <br>
+   <h4><%= @anime.episode %></h4>
+   <br>
+   <h4><%= @anime.platform %></h4>
+  </div>
+  </div>
+
+  <div class="link">
+   <%= link_to "ホームに戻る", animes_path %>
+   <br>
+   <%= link_to "編集", edit_anime_path(@anime.id) %>
+   <%#= button_to "削除", anime_path(@anime.id), method: :delete %>
+  </div>
+</div>
+
+
+
